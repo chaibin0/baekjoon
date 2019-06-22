@@ -10,11 +10,15 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		int N=Integer.parseInt(br.readLine());
-		int next=N;
+		int temp=N;
 		int count=0;
 		while(true) {
-			
+			temp=10*(temp%10)+((temp%10+temp/10)%10);
+			count++;
+			if(temp==N)	break;
 		}
+		
+		System.out.println(count);
 		
 	}
 
