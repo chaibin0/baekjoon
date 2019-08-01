@@ -1,25 +1,45 @@
 package basic;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Basic {
 
 	public static void main(String[] args) throws Exception{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String str = br.readLine();
-		StringTokenizer st = new StringTokenizer(str);
-		int A = Integer.parseInt(st.nextToken());
-		int B = Integer.parseInt(st.nextToken());
+		String first="A";
+		String second="a";
 		
-		/*
-		 StringBuilder stringBuilder = new StringBuilder();
-	        for(int i = 1; i <= input; i++) {
-	            stringBuilder.append(i).append("\n");
-	        }
-	        
-	        */
+		
+		List<String> list=new ArrayList<>();
+		
+		list.add("B");
+		list.add("z");
+		list.add("b");
+		list.add("Z");
+		list.add(second);
+		list.add(first);
+		
+		Collections.sort(list,Collections.reverseOrder(String.CASE_INSENSITIVE_ORDER));
+		for(String data:list)
+			System.out.println(data);
+		
+		A a=new A();
+		
+		
 	}
+	
 
+}
+
+
+class A{
+	private class B{
+		
+	}
+	
+	int a(){
+		B b=new B();
+		return 0;
+	}
 }

@@ -23,7 +23,7 @@ public class Main {
 		int M=Integer.parseInt(br.readLine());
 		str=br.readLine();
 		st=new StringTokenizer(str);
-		for(int i=0;i<M;i++) {
+		for(int i=0;i<M;i++) {////
 			if(set.contains(Integer.parseInt(st.nextToken())))
 				System.out.println(1);
 			else
