@@ -28,6 +28,7 @@ public class Main {
 
 	public static int solve(List<Integer> list) {
 		
+		int min=0;
 		
 		for(int i=0;i<list.size();i++) {
 			for(int j=0;j<i;j++) {
