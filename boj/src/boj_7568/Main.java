@@ -7,7 +7,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
-
+/***
+ * 이글은 무엇입니다.
+ * @author chaibin
+ * @parameter gg
+ * @version
+ * @return
+ * 
+ *
+ */
 public class Main {
 
 	public static void main(String[] args) {

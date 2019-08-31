@@ -28,18 +28,28 @@ public class Main {
 
 	public static int solve(List<Integer> list) {
 		
-		int min=0;
+		int[] forward=new int[list.size()];
+		int[] backward=new int[list.size()];
+	
 		
 		for(int i=0;i<list.size();i++) {
 			for(int j=0;j<i;j++) {
-				
-			}
-			
-			for(int j=i;i<list.size();j++) {
-				
+				if(list.get(j)<list.get(i))
+					forward[i]=Math.max(forward[j]+1,forward[i]);
 			}
 		}
-		return 0;
+			
+		for(int i=list.size()-1;i>0;i--) {
+			for(int j=list.size()-1;j>i;j--) {
+				if(list.get(j)<list.get(i))
+					backward[i]=Math.max(backward[j]+1,backward[i]);
+			}
+		}
+		int max=0;
+		for(int i=0;i<list.size();i++) 
+			max=Math.max(forward[i]+backward[i],max);
+		
+		return max+1;
 	}
 
 }
